@@ -22,7 +22,7 @@ jobs:
         uses: "actions/checkout@v3"
 
       - name: Copy head to keyboard folder of qmk
-        run: cp -a /home/runner/work/Multisteno-Firmware/. /home/runner/qmk_firmware/
+        run: cp -a /home/runner/work/Multisteno-Firmware/Multisteno-Firmware/. /home/runner/qmk_firmware/
 
       - name: Build using make
         run: |
