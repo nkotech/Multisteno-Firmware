@@ -473,8 +473,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 void matrix_init_user(void) {
+  // the below should no longer be needed on QMK as of Q3 2022
   //steno_set_mode(STENO_MODE_BOLT); // STENO_MODE_GEMINI or STENO_MODE_BOLT
-  steno_set_mode(STENO_MODE_GEMINI);
+  //steno_set_mode(STENO_MODE_GEMINI);
   // STENO_MODE_GEMINI only works if you remove references to TX Bolt in QMK
   // follow ecosteno-geminipr.diff to do this (thanks to dnaq in the Plover discord)
 };
