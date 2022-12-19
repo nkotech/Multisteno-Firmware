@@ -1,0 +1,33 @@
+name: Setup Environment
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update system packages
+        run: apt-get update
+
+      - name: Install git and python3-pip
+        run: apt-get install -y sudo git python3-pip
+
+      - name: Install qmk
+        run: python -m pip install --user qmk
+
+      - name: Set up qmk
+        run: qmk setup -y
+
+      - name: Check-out repo
+        uses: "actions/checkout@v3"
+
+      - name: Copy head to keyboard folder of qmk
+        run: cp -a Multisteno-Firmware/. qmk_firmware/
+
+      - name: Build using make
+        run: make noll/multisteno:default
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: Multisteno Firmware
+          path: ~/qmk_firmware/noll_multisteno/noll_multisteno_default.bin

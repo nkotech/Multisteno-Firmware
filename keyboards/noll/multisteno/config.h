@@ -16,12 +16,7 @@
 
 #pragma once
 
-/* USB Device descriptor parameter */
-#define VENDOR_ID       0xFEED // recommended by QMK
-#define PRODUCT_ID      0x3622 
-#define DEVICE_VER      0x0100
-#define MANUFACTURER    Noll Electronics LLC
-#define PRODUCT         Nolltronics Multisteno
+#include "config_common.h"
 
 /* key matrix size */
 #define MATRIX_ROWS 4

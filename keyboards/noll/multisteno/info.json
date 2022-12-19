@@ -1,0 +1,11 @@
+{
+  "keyboard_name": "Nolltronics Multisteno",
+  "manufacturer": "Noll Electronics LLC",
+  "url": "",
+  "maintainer": "Noll Electronics LLC",
+  "usb": {
+    "vid": "0xFEED",
+    "pid": "0x3622",
+    "device_version": "1.0.0"
+  }
+}
