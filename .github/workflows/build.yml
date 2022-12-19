@@ -25,7 +25,9 @@ jobs:
         run: cp -a /home/runner/work/Multisteno-Firmware/. /home/runner/qmk_firmware/
 
       - name: Build using make
-        run: make noll/multisteno:default
+        run: |
+          cd /home/runner/qmk_firmware
+          make noll/multisteno:default
 
       - uses: actions/upload-artifact@v3
         with:
