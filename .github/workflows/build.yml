@@ -31,5 +31,5 @@ jobs:
 
       - uses: actions/upload-artifact@v3
         with:
-          name: Multisteno Firmware
-          path: ~/qmk_firmware/noll_multisteno/noll_multisteno_default.bin
+          name: Multisteno Firmware Default
+          path: /home/runner/qmk_firmware/noll_multisteno_default.bin
