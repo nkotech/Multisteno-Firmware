@@ -17,6 +17,17 @@
 #pragma once
 
 #include "config_common.h"
+/*
+ * Feature disable options
+ *  These options are also useful to firmware size reduction.
+ */
+
+/* disable debug print */
+//#define NO_DEBUG
+
+/* disable print */
+//#define NO_PRINT
+
 
 /* key matrix size */
 #define MATRIX_ROWS 4
@@ -35,7 +46,6 @@
 /* Locking resynchronize hack */
 #define LOCKING_RESYNC_ENABLE
 
-#define COMBO_COUNT 40 // 42 with uppers, 21 without
 #define TAPPING_TERM 137
 #define COMBO_TERM 35
 #define FORCE_NKRO
