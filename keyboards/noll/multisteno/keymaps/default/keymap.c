@@ -119,7 +119,7 @@ const uint16_t PROGMEM Qwerty_NINE_UPPER[]  = {S(KC_O), S(KC_BSPC), COMBO_END};
 const uint16_t PROGMEM Qwerty_ZERO_UPPER[]  = {S(KC_P), S(KC_BSPC), COMBO_END};
 
 
-combo_t key_combos[COMBO_COUNT] = {
+combo_t key_combos[40] = {
   [Q_A] = COMBO_ACTION(Qwerty_A),
   [Q_S] = COMBO_ACTION(Qwerty_S),
   [Q_D] = COMBO_ACTION(Qwerty_D),
