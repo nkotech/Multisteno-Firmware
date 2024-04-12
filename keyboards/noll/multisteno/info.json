@@ -7,14 +7,11 @@
         "bootmagic": true,
         "extrakey": true,
         "mousekey": true,
-        "nkro": true
-    },
-    "combo": {
-        "term": 35
+        "nkro": true,
+        "stenography": true
     },
     "processor": "STM32F103",
     "stenography": {
-        "enabled": true,
         "protocol": "geminipr"
     },
     "url": "",
