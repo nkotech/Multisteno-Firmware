@@ -13,5 +13,21 @@
  * You should have received a copy of the GNU General Public License 
  * along with this program.  If not, see <http://www.gnu.org/licenses/>. 
  */
+#include "quantum.h"
 
-#include "multisteno.h"
+void keyboard_pre_init_kb(void){
+    // Initialize LED pins to correct setting
+    gpio_set_pin_output_push_pull(A0);
+    gpio_set_pin_output_push_pull(A1);
+    
+    keyboard_pre_init_user();
+}
+
+void matrix_init_kb(void){
+    gpio_write_pin_high(A0);
+    gpio_write_pin_high(A1);
+    wait_ms(500);
+    gpio_write_pin_low(A0);
+    
+    matrix_init_user();
+}
