@@ -18,6 +18,9 @@ jobs:
       - name: Set up qmk
         run: qmk setup -y
 
+      - name: Update submodules
+        run: qmk git-submodule
+
       - name: Check-out repo
         uses: "actions/checkout@v3"
 
